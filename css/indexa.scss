@@ -1,0 +1,127 @@
+$colora: rgba(94, 49, 10, 0.921);
+$colorb: rgba(96, 72, 11, 0.949);
+$colorc: rgba(138, 115, 55, 0.925);
+$colord: rgba(189, 174, 134, 0.963);
+$colore: rgba(236, 228, 204, 0.559);
+$colorf: rgba(36, 36, 32, 0.74);
+
+header {
+    display: flex;
+    justify-content: center;
+    background-image: url(../photos/fond/headerfond3.PNG);
+    background-size: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    right: 0%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+li {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: $colorc;
+    border-radius: 15%;
+    padding: 10px;
+}
+
+li a {
+    color: rgb(250, 250, 250);
+    font-size: 20px;
+}
+
+.logo img {
+    width: 900px;
+    height: 200px;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 10px;
+}
+
+.c {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aaright {
+    display: flex;
+    justify-content: baseline;
+    margin-left: 400px;
+}
+.aaleft{
+    margin-right: 0px;
+}
+
+.aa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    background-color: $colore;
+}
+
+.aaa img {
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 10px 10px 20px $colorc ;
+    border: outset;
+}
+
+.aatexte {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+    
+}
+
+body {
+    background-color: $colord;
+}
+
+.picturesa {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
+
+#aaz {
+    width: 400px;
+    height: 450px;
+    margin-right: 20px;
+    margin-top: 25px;
+    box-shadow: 30px 30px 60px $colorc;
+}
+
+#baz {
+    width: 450px;
+    height: 450px;
+    margin-left: 27px;
+    margin-top: 0px;
+}
+
+#caz {
+    width: 380px;
+    height: 450px;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.picturesa img {
+    border: outset;
+    box-sizing: 10px;
+    box-shadow: 30px 30px 60px $colorc;
+}
+.gg{
+    display: flex;
+    justify-content: baseline;
+}

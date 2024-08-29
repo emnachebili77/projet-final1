@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <title>Tous cosmetics</title>
+    <link rel="stylesheet" href="../css/shop.css">
+    <link href="https://fonts.cdnfonts.com/css/ballet" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../photos/fond/logoFinal1-removebg-preview.png" alt="tous">
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="./indexa.html">Home</a></li>
+                    <li><a href="./shop.html">shop</a></li>
+                    <li><a href="./knowledge-expand.html">knowledge expand</a></li>
+                    <li><a href="./contact.html">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section style="margin-top: 300px;">
+        <div class="total">
+            <span class="totaltext"> Total price : </span>
+            <span class="total"> 0 $ </span>
+
+        </div>
+
+        <div class="typecos">
+            <p>Skin care</p>
+        </div>
+        <div class="Skincare">
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>eau micellaire</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/eau1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p style="text-align: center;font-size: 20px;" class="unit-price">25dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+                <script>
+                    function increase(b) {
+                        let q = b.nextElementSibling;
+                        q1 = parseInt(q.textContent)
+                        q1 += 1
+                        q.textContent = q1
+                    }
+                    function decrease(b) {
+                        let q = b.previousElementSibling;
+                        q1 = parseInt(q.textContent)
+                        if (q1 > 0) {
+                            q1 -= 1
+                            q.textContent = q1
+                        }
+
+                    }
+
+                    function updateTotal() {
+                        const quantities = document.querySelectorAll('.cc');
+                        const unitPrices = document.querySelectorAll('.unit-price');
+                        let total = 0;
+
+                        if (quantities.length !== unitPrices.length) {
+                            console.error('Mismatch between quantities and unit prices count');
+                            return;
+                        }
+
+                        for (let i = 0; i < quantities.length; i++) {
+                            const quantityText = quantities[i].textContent.trim();
+                            const unitPriceText = unitPrices[i].textContent.trim();
+
+                            // Parse quantity and unit price
+                            const quantity = parseInt(quantityText, 10);
+                            const unitPrice = parseInt(unitPriceText.replace('dt', '').trim(), 10);
+
+                            // Check if parsing was successful
+                            if (isNaN(quantity) || isNaN(unitPrice)) {
+                                console.error(`Invalid data: quantity=${quantityText}, unitPrice=${unitPriceText}`);
+                                continue; // Skip this iteration
+                            }
+
+                            total += quantity * unitPrice;
+                        }
+
+                        const totalElement = document.querySelector('.total');
+                        if (totalElement) {
+                            totalElement.textContent = `Total: ${total} dt`;
+                        } else {
+                            console.error('Total element not found');
+                        }
+                    }
+                    document.addEventListener('click', event => {
+                        if (event.target.classList.contains('pp')) {
+                            increase(event.target);
+                            updateTotal();
+
+                        } else if (event.target.classList.contains('mm')) {
+                            decrease(event.target);
+                            updateTotal();
+
+                        }
+                    })
+                </script>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>eau micellaire</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/eau2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p style="text-align: center;font-size: 20pxF;" class="unit-price">25dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>eau micellaire</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/eau3.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p style="text-align: center;font-size: 20pxF;" class="unit-price">25dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Creme</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/hydrate1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p style="text-align: center;font-size: 20pxF;" class="unit-price">25dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>under eye patch</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/eye2.jpg" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">25dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>under eye patch</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/eye3.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">5Odt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Gel Creme</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/gras1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">75dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Creme hydratante</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/gras2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">80dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Creme hydratante</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/gras3.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">99.900dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Creme hydratante</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/gras4.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">60dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Masque pour visage</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/serum4.jpg" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">50dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>under eye patch</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/eye2.jpg" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">25dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Lotion tonique</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/tonic1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">40dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Lotion tonique</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/TONIC2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p  class="unit-price" style="text-align: center;font-size: 20pxF;">40dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Masque Pell-Off</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/masque1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">20dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Masque pour visage</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/masque4.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">30dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>masque visage</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/skin care/masque5.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">50dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc"></p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="typecos">
+            <p>Make up</p>
+        </div>
+        <div class="Makeup">
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Rouge à levre</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/rougea1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">30dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Rouge à levre</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/rougea2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">30dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Rouge à levre</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/rougea3.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">30</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Roge à lèvres</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/ROUGEa4.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">30dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Rouge à levre</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/rougeb1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">40dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Rouge à levre</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/rougeb2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">40dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Rouge à levre</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/rougec1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">45dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Rouge à levre</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/rougec2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">45dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Rouge à levre</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/rouged1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">60dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Rouge à levre</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/rouged2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">60dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>crayon à lèvres</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/crayonra1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">30dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>crayon à lèvres</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/crayonra2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">30dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>crayon à lèvres</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/crayonr1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">30dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p></p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/crayon2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">30dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Gloss DIOR</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/glossa.jpg" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">180dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Gloss DIOR</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/glossa2.jpg" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">180dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Foundation</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/fonde1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">40dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Foundation</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/fond2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">80dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Foundation</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/fonde3.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">30dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>DIOR Foundation</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/fonddior1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">300dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>DIOR Foundation</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/fonddior2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">300dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Eye-shadow</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/eyes1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">80dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Eye-shadow</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/EYES2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">40dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Eye-shadow</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/eyes3.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">30dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Blush</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/blush1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">50dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Blush</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/blush2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">80dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Blush</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/blush3.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">28dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc"> 0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Bronzer</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/bronzer1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">60dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Bronzer</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/make up/bronzer2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">80dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="typecos">
+            <p>Perfume</p>
+        </div>
+        <div class="Perfume">
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>J'adore DIOR</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/parfun/dior1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">400dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>Miss DIOR</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/parfun/dior2.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p  class="unit-price"style="text-align: center;font-size: 20pxF;">420dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>YSL libre</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/parfun/yves saint laurant libre.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">450dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>YSL Myself</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/parfun/ysl myself.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">500dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="produit">
+                <div class="present">
+                    <p style="font-family: 'Ballet', sans-serif;color: rgb(58, 44, 9);font: size 30px;">Tous Cosmetics
+                    </p>
+                    <p>classOLE</p>
+                </div>
+                <div class="imge">
+                    <img src="../photos/parfun/classole1.PNG" alt="tous">
+                </div>
+                <div class="price">
+                    <p class="unit-price" style="text-align: center;font-size: 20pxF;">420dt</p>
+                    <div class="quantité">
+                        <p class="pp">+</p>
+                        <p class="cc">0</p>
+                        <p class="mm">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

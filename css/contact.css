@@ -1,0 +1,71 @@
+header {
+  display: flex;
+  justify-content: center;
+  background-image: url(../photos/fond/headerfond3.PNG);
+  background-size: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0%;
+  right: 0%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+li {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: rgba(138, 115, 55, 0.925);
+  border-radius: 15%;
+  padding: 10px;
+}
+
+li a {
+  color: rgb(250, 250, 250);
+  font-size: 20px;
+}
+
+.logo img {
+  width: 900px;
+  height: 200px;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 10px;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 350px;
+  margin-right: 350px;
+}
+
+.nom {
+  margin-top: 360px;
+  margin-left: 460px;
+  padding-bottom: 0px;
+  margin-bottom: 30px;
+}
+
+.maina {
+  background-image: url(../photos/fond/idee.jpg);
+  margin-top: 0px;
+}
+
+body {
+  background-color: rgba(189, 174, 134, 0.963);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=contact.css.map */
